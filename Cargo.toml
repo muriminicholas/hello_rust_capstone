@@ -1,0 +1,13 @@
+[package]
+name = "hello_rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["Moringa Student"]
+description = "A beginner Rust project for the Moringa School GenAI Capstone"
+readme = "README.md"
+license = "MIT"
+
+# No external dependencies — this project uses the Rust standard library only.
+# To add a crate in future, list it here. Example:
+#   serde = "1.0"
+[dependencies]
