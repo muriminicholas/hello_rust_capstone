@@ -278,7 +278,40 @@ Using Claude as a learning companion fundamentally changed how fast I could get 
 
 ---
 
-## ⚠️ Common Issues & Fixes
+## 🧪 Testing & Iteration
+
+### Self-Testing Checklist
+
+| Test | Result | Notes |
+|------|--------|-------|
+| `cargo new` creates project without errors | ✅ PASS | Tested on Ubuntu 22.04 |
+| `cargo run` compiles and prints expected output | ✅ PASS | Output matches exactly |
+| `cargo check` catches type errors before run | ✅ PASS | Tested by intentionally passing wrong type |
+| `cargo build --release` produces optimised binary | ✅ PASS | Binary appears in `target/release/` |
+| `cargo fmt` reformats code consistently | ✅ PASS | No diff on already-clean code |
+| `cargo clippy` reports no warnings | ✅ PASS | Zero warnings on submission version |
+
+### Peer Testing
+
+The toolkit was shared with a fellow Moringa student (Python background, no prior Rust experience, tested on Windows 11) who followed the guide from scratch without assistance.
+
+**Feedback received & actions taken:**
+
+| Issue Reported | Action Taken |
+|----------------|--------------|
+| Windows install step didn't mention restarting the terminal after `rustup` | Added explicit restart note to setup steps |
+| Difference between `cargo run` and `cargo build` wasn't immediately obvious | Added a one-line explanation of when to use each |
+| Ownership concept box felt too brief | Expanded explanation with a scope note |
+| `error: linker not found` error hit on Windows — common errors table was useful | No change — confirmed the table is valuable |
+| Missing semicolon caused a confusing error message | Added the "unexpected token" row to the errors table |
+
+### Key Learning from Iteration
+
+> Writing for beginners means removing every assumption — even ones that feel too basic to mention. The most valuable feedback came from watching someone follow the guide without any help.
+
+---
+
+
 
 | Error / Problem | Likely Cause | Fix |
 |----------------|--------------|-----|
